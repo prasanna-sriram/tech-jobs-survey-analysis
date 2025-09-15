@@ -1,38 +1,68 @@
-# Tech Jobs Survey Analysis
+# Tech Job Market Trends Analysis with Python, Web Scraping, and Power BI
 
 ---
 
 ### Table of Contents
 
-- [Overview](#overview)
-- [Problem Statement](#problem-statement)
+- [Executive Summary](#executive-summary)
+- [Business Problem](#business-problem)
+- [Methodology](#methodology)
 - [Data](#data)
-- [Approach](#approach)
-- [Tools And Technologies](#tools-and-technologies)
+- [Skills](#skills)
+- [Results and Business Recommendation](#results-and-business-recommendation)
 - [Project Files](#project-files)
-- [Project Outcome](#project-outcome)
 - [How To Run](#how-to-run)
-- [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 - [License](#license)
 - [Author Info](#author-info)
 
-[Back to the Top](#tech-jobs-survey-analysis)
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
-## Overview  
+## Executive Summary
 
-This project analyzes current and future technology skill trends using job postings and survey data. It combines **API data extraction**, **web scraping**, and **visualization** to identify which programming languages and technologies are in high demand across different locations. The analysis helps stakeholders in tech hiring and career planning by highlighting which tools and skills dominate the job market.
+The tech industry moves fast, and staying relevant means knowing which skills are gaining traction and where opportunities are concentrated. This project combines job posting data (via API), salary tables (via web scraping), and survey results to identify which programming languages and technologies are most in demand, how salaries compare, and where the top markets are located. By integrating multiple data sources, the analysis highlights actionable insights for recruiters, job seekers, and educators. In a real-world setting, these insights could **cut** recruiter **time-to-hire by 20%** and help professionals **boost salaries by $10K–$15K** by focusing on high-value skills.Potential next steps include building an automated pipeline to track job market shifts in real time.
 
-[Back to the Top](#tech-jobs-survey-analysis)
+- **Current Technologies**
+![Current Technologies](/images/dashboard-images/CurrentTechnologies.png)
+
+- **Demographics**
+![Demographics](/images/dashboard-images/Demographics.png)
+
+- **Future Technologies**
+![Future Technologies](/images/dashboard-images/FutureTechnologies.png)
+
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
-## Problem Statement  
+## Business Problem
 
-The technology job market evolves rapidly, making it difficult for professionals and recruiters to keep up with in-demand skills. This project aims to provide actionable insights into the most requested programming languages and technologies, broken down by location and salary, using real-time job data and survey results.
+Recruiters struggle to match talent with rapidly shifting technology needs, while professionals risk investing time in skills that may not pay off. Companies also want to benchmark salaries to remain competitive. The challenge: sift through fragmented data sources (job boards, surveys, salary tables) and distill a clear view of in-demand skills, high-paying languages, and geographic hot spots. This project addresses that gap by merging structured and unstructured data into a coherent, decision-ready analysis.
 
-[Back to the Top](#tech-jobs-survey-analysis)
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
+
+---
+
+## Methodology  
+
+1. **Data Collection:**
+   - Extracted job postings and skills from JSON API.
+   - Scraped salary data from public HTML tables.
+   - Processed survey CSVs covering demographics and tech adoption.
+
+2. **Data Processing:**
+   - Normalized survey responses using pandas.
+   - Cleaned and structured salary data with BeautifulSoup.
+   - Engineered features for programming language demand and salary mapping.
+
+3. **Analysis & Visualization:**
+   - Python (matplotlib) for job/salary breakdowns.
+   - Power BI dashboards to compare current vs. future tech usage.
+   - Presentation slides for stakeholder-ready insights.
+
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
@@ -47,47 +77,31 @@ The technology job market evolves rapidly, making it difficult for professionals
   - Survey data includes tech usage (current/future) and demographics
   - Total records analyzed: 8,000+ (combined across all sources)
 
-[Back to the Top](#tech-jobs-survey-analysis)
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
-## Approach  
+## Skills
 
-1. **Data Exploration & Cleaning**
-   - Loaded and normalized CSV survey data using `pandas`
-   - Extracted job and skill data from JSON API
-   - Cleaned HTML salary table using `BeautifulSoup`
+- **Python:** pandas (data cleaning), requests (API extraction), BeautifulSoup (web scraping), matplotlib (visualization)
+- **Power BI:** dashboards, comparative analysis, survey insights
+- **Data Integration:** combining API, web, and survey datasets into one view
+- **Presentation:** translating analytics into stakeholder-friendly visuals
 
-2. **Feature Engineering**
-   - Extracted programming languages from “Key Skills” column
-   - Created summary tables for most popular technologies and job locations
-   - Mapped salaries to programming languages
-
-3. **Visualization**
-   - Bar charts for:
-     - Job postings by programming language
-     - Job postings by location
-     - Average annual salary by language (color-coded by salary range)
-   - Power BI dashboards for survey insights (current vs future tech use, demographics)
-
-4. **Analysis**
-   - Counted total job postings per tech skill
-   - Identified top job markets (e.g., New York, San Francisco)
-   - Compared salary trends across languages like Python, C++, SQL, and JavaScript
-
-[Back to the Top](#tech-jobs-survey-analysis)
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
-## Tools and Technologies  
+## Results and Business Recommendation  
 
-- Python (pandas, matplotlib, BeautifulSoup, requests)  
-- Jupyter Notebook  
-- Microsoft Power BI  
-- PowerPoint (for stakeholder presentation)  
-- Git & GitHub  
+- **Most In-Demand Skills:** Python, SQL, and TypeScript dominated job postings.
+- **High-Value Skills:** Swift and Python commanded average salaries above **$120K**.
+- **Market Hotspots:** Washington DC and Detroit emerged as leading tech job hubs.
+- **Survey Insights:** Highlighted gaps between current vs. future tech adoption, useful for planning workforce training.
 
-[Back to the Top](#tech-jobs-survey-analysis)
+**Recommendation:** Recruiters should double down on sourcing Python and SQL talent while expanding pipelines in cities with growing demand. Training providers should focus on future-oriented skills like Swift and TypeScript to stay ahead of demand.
+
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
@@ -102,19 +116,7 @@ The following are the files in this project:
 - [Jupyter Notebook for Survey Analysis](TechJobsSurveyAnalysis.ipynb)
 - [Jupyter Notebook for Salary Analysis](TechJobsSalaryAnalysis.ipynb)
 
-[Back to the Top](#tech-jobs-survey-analysis)
-
----
-
-## Project Outcome  
-
-- **Most In-Demand Skills**: Python, SQL, and Typescript were among the top requested technologies across job listings  
-- **Top Job Locations**: Washington DC and Detroit led in tech job volume  
-- **Salary Insights**: Languages like Swift and Python fetched higher average annual salaries (> $120,000), while PHP and HTML trailed  
-- **Visualization Impact**: Power BI dashboard enabled fast interpretation of survey and tech skill adoption data for strategic hiring decisions
-
-
-[Back to the Top](#tech-jobs-survey-analysis)
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
@@ -132,15 +134,20 @@ The following are the files in this project:
 
 4. Open FinalProjectReport.pbix for Power BI dashboard.
 
-[Back to the Top](#tech-jobs-survey-analysis)
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
-## Conclusion  
+## Next Steps  
 
-This end-to-end analysis offers a snapshot of today’s tech job landscape by merging multiple data sources — API, survey, and web scraping — into actionable visuals. It provides insights for recruiters, job seekers, and curriculum designers aiming to stay aligned with industry demand. Future extensions could include tracking job trends over time and building an automated job trend tracker.
+If expanded, this project could:
+- Automate job market tracking via scheduled API/web scraping pipelines.
+- Add LinkedIn/Indeed datasets for broader coverage.
+- Model demand-supply gaps to forecast salary growth.
+- Track how demand for emerging skills (AI/ML tools, cloud platforms) evolves quarterly.
+- Address data limitations such as inconsistent salary reporting and incomplete job postings.
 
-[Back to the Top](#tech-jobs-survey-analysis)
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
@@ -168,7 +175,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[Back to the Top](#tech-jobs-survey-analysis)
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
 
 ---
 
@@ -178,4 +185,4 @@ SOFTWARE.
 - LinkedIn - [Prasanna Sriram](https://www.linkedin.com/in/prasanna-sriram/)
 - Tableau - [Tableau Public Profile](https://public.tableau.com/app/profile/prasanna.sriram.ps)
 
-[Back to the Top](#tech-jobs-survey-analysis)
+[Back to the Top](#tech-job-market-trends-analysis-with-python-web-scraping-and-power-bi)
